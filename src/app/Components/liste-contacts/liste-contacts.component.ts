@@ -23,5 +23,10 @@ export class ListeContactsComponent implements OnInit {
       this.contacts[0]=[res,...this.contacts[0]]
     })
   }
+  onDelete =(id:number,index:number)=>{
+    this.contactService.deleteContact(id).subscribe(res =>{
+      this.contacts[0].splice(index,1)
+    })
+  }
 
 }

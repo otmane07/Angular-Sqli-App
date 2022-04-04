@@ -5,9 +5,10 @@
 <div *ngIf="contacts[0]?.length > 2; then thenBlock; else elseBlock"> </div>
 <ng-template #thenBlock >
     <ul class="list">
-        <li class="list__item" *ngFor="let c of contacts[0]">
+        <li class="list__item" *ngFor="let c of contacts[0]; index as i">
             <span class="list__item__name">{{c.name}}  :  </span>
             <span class="list__item__phone">{{c.phone}}</span>
+            <button class="list__item__delete" (click)="onDelete(c.id,i)">DELETE</button>
         </li>
     </ul>
 </ng-template> 

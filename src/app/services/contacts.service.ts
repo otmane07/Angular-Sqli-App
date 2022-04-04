@@ -14,4 +14,7 @@ export class ContactsService {
   addContact(c:Contact) {
     return this.httpClient.post(this.url,c)
   }
+  deleteContact(id:number) {
+    return this.httpClient.delete(`${this.url}/${id}`);
+  }
 }
