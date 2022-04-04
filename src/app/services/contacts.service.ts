@@ -1,3 +1,4 @@
+import  Contact  from 'src/app/Models/Contact';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -9,5 +10,8 @@ export class ContactsService {
   constructor(private httpClient : HttpClient) { }
   getContact = ()=>{
     return this.httpClient.get(this.url)
+  }
+  addContact(c:Contact) {
+    return this.httpClient.post(this.url,c)
   }
 }

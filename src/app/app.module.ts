@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { ListeContactsComponent } from './Components/liste-contacts/liste-contacts.component';
-import { AddContactComponent } from './Components/add-contact/add-contact.component';
+import { AddContactComponent } from './Components/liste-contacts/add-contact/add-contact.component';
 import { ContactsService } from './services/contacts.service';
 
 

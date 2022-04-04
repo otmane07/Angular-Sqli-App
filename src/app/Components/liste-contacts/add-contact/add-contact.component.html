@@ -1,0 +1,33 @@
+
+    <form class="form" >
+       <div class="form__add" >
+       <header class="form__add__head">
+          <h2 class="form__add__head__title">Add Contact</h2>
+       </header>
+
+       <br>
+
+       <div class="form__add__container">
+               <div class="form__add__container__item">
+                  <i class="fa fa-user-circle"></i>
+                  <input class="form__add__container__item__input" 
+                   type="text"
+                   id="txt-input"  
+                   placeholder="Name" 
+                   [(ngModel)]="contact.name" 
+                   name="nom"
+                   required />
+               </div>
+               <br/>
+               <div class="form__add__container__item">
+                  <i class="fa fa-phone"></i>
+                  <input class="form__add__container__item__input"  type="text" id="txt-input" placeholder="Télephone"  [(ngModel)]="contact.phone"  name="tel" required />
+               </div>              
+          <br>    
+          <button (click)="activerAjout()"  class="form__add__container__button"> ADD </button>
+ 
+       </div>     
+      </div>   
+    </form>
+    <!-- {{contact |json}} -->
+

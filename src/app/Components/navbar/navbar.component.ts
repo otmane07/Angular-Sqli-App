@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output ,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
+  @Input() showForm:boolean=false;
+  @Output() updateEvent = new EventEmitter<boolean>();
   constructor() { }
 
   ngOnInit(): void {
+  }
+  showFormUpdateAdd = ()=>{
+    this.showForm=true;
+    this.updateEvent.emit(this.showForm);
+  }
+  showFormUpdateContacts =()=>{
+    this.showForm=false;
+    this.updateEvent.emit(this.showForm);
   }
 
 }

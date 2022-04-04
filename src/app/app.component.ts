@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-Sqli-App';
+  displayForm = false;
+  updateDisplayForm = (sF:boolean)=>{
+    this.displayForm = sF;
+  }
 }

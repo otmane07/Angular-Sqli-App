@@ -1,3 +1,6 @@
+<div *ngIf="showForm">
+    <app-add-contact (addEvent)="addParentEvent($event)"></app-add-contact> 
+</div>
 
 <div *ngIf="contacts[0]?.length > 2; then thenBlock; else elseBlock"> </div>
 <ng-template #thenBlock >
@@ -11,3 +14,4 @@
 <ng-template #elseBlock >
     <h1>Aucun contact</h1>
 </ng-template>
+

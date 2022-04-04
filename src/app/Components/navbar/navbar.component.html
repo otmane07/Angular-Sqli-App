@@ -1,7 +1,7 @@
 
   <nav class="navbar">
 	  <ul class="navbar__list">
-		<li class="navbar__list__item"><a class="navbar__list__item__link" routerLink="/contacts" routerLinkActive="navbar__list__item__link--active" >Contacts</a></li>
-		<li class="navbar__list__item"><a class="navbar__list__item__link" routerLink="/addContact" routerLinkActive="navbar__list__item__link--active">Add</a></li>	
+		<li class="navbar__list__item" (click)="showFormUpdateContacts()" ><a class="navbar__list__item__link" routerLink="/contacts" routerLinkActive="navbar__list__item__link--active" >Contacts</a></li>
+		<li class="navbar__list__item" (click)="showFormUpdateAdd()"><a class="navbar__list__item__link" routerLink="/addContact" routerLinkActive="navbar__list__item__link--active">Add</a></li>	
 	  </ul>
 	</nav>
